@@ -1,18 +1,21 @@
 JCC = javac
 
-default: master.class message.class process.class simulation.class
+default: Master.class Message.class Process.class Simulation.class RMIInterface.class
 
-master.class: master.java
-	$(JCC) master.java
+Master.class: Master.java
+	$(JCC) Master.java
 
-message.class: message.java
-	$(JCC) message.java
+Message.class: Message.java
+	$(JCC) Message.java
 
-process.class: process.java
-	$(JCC) process.java
+Process.class: Process.java
+	$(JCC) Process.java
 	
-simulation.class: simulation.java
-	$(JCC) simulation.java
+Simulation.class: Simulation.java
+	$(JCC) Simulation.java
+	
+RMIInterface.class: RMIInterface.java
+	$(JCC) RMIInterface.java
 	
 clean: 
 	$(RM) *.class
